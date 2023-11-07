@@ -1,13 +1,13 @@
 ---
-
-- name: Install Nginx
-  package:
-    name: nginx
-    state: latest
-  tags:
-    - install-nginx
-
-- name: Restart nginx
+- name: ensure nginx is at the latest version
+  apt: name=nginx  update_cache=yes  state=latest
+- name: start nginx
   service:
     name: nginx
     state: restarted
+
+- name: Install htop
+  apt:
+    name: htop
+    state: present
+    update_cache: true      
