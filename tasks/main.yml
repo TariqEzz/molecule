@@ -1,0 +1,13 @@
+---
+
+- name: Install Nginx
+  package:
+    name: nginx
+    state: latest
+  tags:
+    - install-nginx
+
+- name: Restart nginx
+  service:
+    name: nginx
+    state: restarted
