@@ -1,0 +1,3 @@
+permet aus programmes de communiquer avec docker deamon 
+
+sudo chmod 666 /var/run/docker.sock
